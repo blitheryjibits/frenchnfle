@@ -20,6 +20,9 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Frech`n FLE",
   description: "French language learning website",
+  icons: {
+    icon: '/icon.png'
+  }
 };
 
 export default function RootLayout({
