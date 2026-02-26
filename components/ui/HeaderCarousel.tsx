@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 
 
 
-export function HeaderCarousel({height, width}: {height?: number, width?: number}) {
+export function HeaderCarousel({textOverlay}: {textOverlay?: string}) {
     const [images, setImages] = useState<string[]>([]);
     useEffect(() => {
         const fetchImages = async () => {
@@ -35,18 +35,27 @@ export function HeaderCarousel({height, width}: {height?: number, width?: number
 
         }),
       ]}
-      className="w-full"
+      className="w-screen"
     >
+      {textOverlay && (
+        <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+          <h1 className="font-playfair md:text-4xl w-[70vw] text-center text-purple-400">
+            {textOverlay}
+          </h1>
+        </div>
+      )}
       <CarouselContent className="">
         {images.map((src, i) => (
           <CarouselItem key={i} className="">
               <Card className="border-none">
                 <CardContent 
-                    className="relative flex items-center justify-center"
-                    style={{width: width, height: height}}>
+                    className="
+                      relative flex items-center justify-center 
+                      border-none h-[35vh] lg:h-[60vh]"
+                    >
                   <Image src={src} alt="" 
                     fill
-                    className="object-cover object-middle w-full h-full filter brightness-50"
+                    className="object-cover w-full filter brightness-50"
                     />
                 </CardContent>
               </Card>
