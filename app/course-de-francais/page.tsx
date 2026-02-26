@@ -1,11 +1,11 @@
 
 import {Nav} from "@/components/ui/Nav"
 
-export const CourseDeFrancais = () => {
+export default function CourseDeFrancais() {
 
     return (
-        <div>
+        <main>
             <Nav />
-        </div>
+        </main>
     )
 }
