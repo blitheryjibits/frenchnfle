@@ -11,6 +11,11 @@ declare global {
         disabled?: boolean;
         value?: string;
     };
+
+    type NAV_ITEMS = [{
+       label: string;
+       href: string;
+    }]
 }
 
 export {};
