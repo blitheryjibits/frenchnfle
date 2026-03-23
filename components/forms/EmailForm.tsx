@@ -29,7 +29,7 @@ export const EmailForm = () => {
   }
 
   return (
-    <div className="w-full mb-4 bg-gray-500 flex items-center justify-center">
+    <div className="mb-4 flex items-center justify-center">
       <form onSubmit={handleSubmit(onSubmit)} className="bg-gray-800 p-8 rounded flex flex-col gap-3 shadow-md w-full max-w-lg">
         <InputField 
           name="fullName"

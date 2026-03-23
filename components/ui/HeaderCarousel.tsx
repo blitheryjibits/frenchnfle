@@ -53,7 +53,7 @@ export function HeaderCarousel({textOverlay}: {textOverlay?: string}) {
                       relative flex items-center justify-center 
                       border-none h-[35vh] lg:h-[60vh]"
                     >
-                  <Image src={src} alt="" 
+                  <Image src={src} alt="Image of Parisian streets" 
                     fill
                     className="object-cover w-full filter brightness-50"
                     />

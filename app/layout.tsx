@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Playfair_Display,
+  Noto_Serif,
+  Plus_Jakarta_Sans,
+  EB_Garamond,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,12 +24,25 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+});
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
+});
+const eBGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Frech`n FLE",
   description: "French language learning website",
   icons: {
-    icon: '/icon.png'
-  }
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -33,7 +53,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} antialiased`}
+        className={`
+          ${geistSans.variable} 
+          ${geistMono.variable} 
+          ${playfairDisplay.variable} 
+          ${notoSerif.variable} 
+          ${plusJakartaSans.variable} 
+          ${eBGaramond.variable} 
+          antialiased
+          `}
       >
         {children}
       </body>

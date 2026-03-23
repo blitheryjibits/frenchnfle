@@ -2,14 +2,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-playfair: var(--font-playfair-display);
+  --font-noto-serif: var(--font-noto-serif);
+  --font-plus-jakart-sans: var(--font-plus-jakart-sans);
+  --font-eb-garamond: var(--font-eb-garamond);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -46,6 +47,67 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  /* custom color pallete */
+  --color-shadow-grey-50: #f4f2f0;
+  --color-shadow-grey-100: #eae4e1;
+  --color-shadow-grey-200: #d5c9c3;
+  --color-shadow-grey-300: #c0aea5;
+  --color-shadow-grey-400: #aa9388;
+  --color-shadow-grey-500: #95786a;
+  --color-shadow-grey-600: #776055;
+  --color-shadow-grey-700: #5a483f;
+  --color-shadow-grey-800: #3c302a;
+  --color-shadow-grey-900: #1e1815;
+  --color-shadow-grey-950: #15110f;
+
+  --color-apricot-cream-50: #fff3e6;
+  --color-apricot-cream-100: #fee8cd;
+  --color-apricot-cream-200: #fdd19b;
+  --color-apricot-cream-300: #fdba68;
+  --color-apricot-cream-400: #fca336;
+  --color-apricot-cream-500: #fb8c04;
+  --color-apricot-cream-600: #c97003;
+  --color-apricot-cream-700: #975402;
+  --color-apricot-cream-800: #643802;
+  --color-apricot-cream-900: #321c01;
+  --color-apricot-cream-950: #231401;
+
+  --color-powder-blush-50: #fee8e6;
+  --color-powder-blush-100: #fdd1ce;
+  --color-powder-blush-200: #fba39d;
+  --color-powder-blush-300: #fa756b;
+  --color-powder-blush-400: #f8473a;
+  --color-powder-blush-500: #f61909;
+  --color-powder-blush-600: #c51407;
+  --color-powder-blush-700: #940f05;
+  --color-powder-blush-800: #620a04;
+  --color-powder-blush-900: #310502;
+  --color-powder-blush-950: #220301;
+
+  --color-harvest-orange-50: #fff1e6;
+  --color-harvest-orange-100: #ffe4cc;
+  --color-harvest-orange-200: #fec99a;
+  --color-harvest-orange-300: #fead67;
+  --color-harvest-orange-400: #fe9234;
+  --color-harvest-orange-500: #fe7701;
+  --color-harvest-orange-600: #cb5f01;
+  --color-harvest-orange-700: #984701;
+  --color-harvest-orange-800: #653001;
+  --color-harvest-orange-900: #331800;
+  --color-harvest-orange-950: #241100;
+
+  --color-granite-50: #f0f5f3;
+  --color-granite-100: #e1eae7;
+  --color-granite-200: #c2d6d0;
+  --color-granite-300: #a4c1b8;
+  --color-granite-400: #86aca0;
+  --color-granite-500: #679888;
+  --color-granite-600: #53796d;
+  --color-granite-700: #3e5b52;
+  --color-granite-800: #293d37;
+  --color-granite-900: #151e1b;
+  --color-granite-950: #0e1513;
 }
 
 @layer utilities {
@@ -61,19 +123,19 @@ textarea {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #ebebeb;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --primary: #ce4480;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: #925464;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --accent: #333333;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
