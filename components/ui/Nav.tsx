@@ -1,16 +1,15 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { TextAlignJustify, X } from "lucide-react";
 
 export const Nav = () => {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const linkClass = (href: string) =>
     pathname === href
-      ? "underline underline-offset-4 text-purple-200"
-      : "hover:underline underline-offset-4 hover:text-purple-300 transition";
+      ? "underline underline-offset-4 text-primary"
+      : " hover:bg-secondary transition";
 
   const items = [
     { label: "Accueil", href: "/" },
@@ -27,14 +26,15 @@ export const Nav = () => {
   return (
     <nav
       className={`
-        w-full sticky top-0 z-30 pb-2 pr-2
-        grid grid-cols-8
-        bg-[#2a35bc]/40
+        w-screen sticky top-0 z-30
+        flex flex-row justify-between
+        bg-background
+        overflow-x-clip
         `}
     >
       <div
         className="
-            col-span-2 md:col-span-1 ml-2 mt-2 md:ml-4 py-4
+            ml-2 mt-2 md:ml-4 py-4
             -rotate-20"
       >
         <Image
@@ -43,36 +43,66 @@ export const Nav = () => {
           alt="French`n FLE Logo"
           width={150}
           height={100}
-          className=""
+          className="-m-2"
         />
       </div>
 
-      <div className="col-8 flex items-center justify-end md:hidden px-4 py-2">
-        <button
-          type="button"
-          onClick={() => setOpen(!open)}
-          className="text-white text-2xl focus:outline-none"
-          aria-label="Toggle navigation"
+      {/* menu */}
+      <div className="relative h-100% flex-1">
+        <input
+          title="sidebar-active"
+          type="checkbox"
+          name="sidebar-active"
+          id="sidebar-active"
+          className="hidden peer"
+        />
+        <label
+          id=""
+          htmlFor="sidebar-active"
+          className="md:hidden peer-checked:hidden
+          absolute right-2 top-[50%] -translate-y-[50%]"
         >
-          ☰
-        </button>
-      </div>
-      {/* Menu */}
-      <ul
-        className={`
-            col-span-7 text-[clamp(.65rem, 0.8rem, 1.2rem)] list-none md:gap-2
-            flex flex-row justify-end items-center 
-            transition-all duration-300
-            ${open ? "max-h-96 py-2" : "max-h-0 overflow-hidden md:max-h-none md:py-0"}`}
-      >
-        {items.map((item) => (
-          <li key={item.href} className="text-center text-white w-full px-2">
-            <Link href={item.href} className={linkClass(item.href)}>
-              {item.label}
-            </Link>
+          <TextAlignJustify />
+        </label>
+
+        {/* menu list */}
+
+        <ul
+          className={`absolute top-0 -right-full max-w-3/4 h-screen
+              flex flex-col 
+              gap-4 pt-4 
+              bg-background/60 backdrop-blur 
+              peer-checked:right-0
+              transtition-all duration-300
+              md:bg-transparent
+              md:max-w-full md:flex md:flex-row md:right-0 md:h-full
+              md:gap-0 md:pt-0 md:pr-4 md:text-sm
+              
+              `}
+        >
+          <li className="ml-auto md:hidden pr-4">
+            <label htmlFor="sidebar-active">
+              <X />
+            </label>
           </li>
-        ))}
-      </ul>
+          {items.map((item) => (
+            <li
+              key={item.href}
+              id={item.label}
+              className="md:flex md:items-center text-accent"
+            >
+              <Link
+                href={item.href}
+                className={`py-1 px-2 rounded-md block text-center ${linkClass(item.href)}`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Menu */}
     </nav>
   );
 };

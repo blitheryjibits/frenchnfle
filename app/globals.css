@@ -131,7 +131,7 @@ textarea {
   --popover-foreground: oklch(0.145 0 0);
   --primary: #ce4480;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #925464;
+  --secondary: #c13356;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -197,4 +197,29 @@ textarea {
   body {
     @apply bg-background text-foreground;
   }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to-bottom,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  border-radius: 9px;
 }
