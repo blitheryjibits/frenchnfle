@@ -48,8 +48,18 @@ declare global {
     }>;
   }
 
-  interface PriceCardProps {
+  interface MaisonryCardProps {
     title: string;
+    badge?: ReactNode;
+    icon: ReactNode;
+    paragraphs?: Array<string | ReactNode>;
+    footerTags?: ReactNode[];
+    className?: string;
+    headerClass?: string;
+  }
+
+  interface PriceCardProps {
+    title?: string;
     duration: string | number;
     price: string | number;
     priceExtract: string | number;

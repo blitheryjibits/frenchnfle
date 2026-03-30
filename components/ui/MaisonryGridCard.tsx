@@ -9,16 +9,6 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
-interface MaisonryCardProps {
-  title: string;
-  badge?: ReactNode;
-  icon: ReactNode;
-  paragraphs?: Array<string | ReactNode>;
-  footerTags?: ReactNode[];
-  className?: string;
-  headerClass?: string;
-}
-
 export function MaisonryGridCard({
   title,
   badge,
@@ -39,7 +29,7 @@ export function MaisonryGridCard({
         <CardAction className="font-eb-garamond">{badge}</CardAction>
         <div className={cn("", headerClass)}>
           <div className="mb-6 md:mb-8">{icon}</div>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="text-2xl">{title}</CardTitle>
         </div>
       </CardHeader>
 
@@ -47,7 +37,7 @@ export function MaisonryGridCard({
         {Array.isArray(paragraphs) &&
           paragraphs.map((node, i) =>
             typeof node === "string" ? (
-              <p key={i} className="mb-2">
+              <p key={i} className="mb-2 md:text-xl">
                 {node}
               </p>
             ) : (
