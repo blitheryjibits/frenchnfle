@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function CourseDeFrancais() {
   return (
-    <main className="w-full h-min-screen flex flex-col justify-center font-playfair">
+    <main className="w-full h-min-screen flex flex-col justify-center">
       <Nav />
       <Hero
         className="bg-primary-foreground"
@@ -34,7 +34,7 @@ export default function CourseDeFrancais() {
         footer={["A1-C2", "FLE Specilaité", "suivi IB"]}
       />
 
-      <section className="w-full">
+      <section className="w-full mt-32">
         <div className="w-full px-4 md:px-0 md:w-8/9 mx-auto flex flex-col gap-8">
           <h2 className="relative text-3xl font-noto-serif ">
             <span className="relative before:content-[''] before:absolute before:w-full before:h-1 before:bottom-0 before:bg-primary before:left-0">
@@ -100,7 +100,7 @@ export default function CourseDeFrancais() {
         </div>
       </section>
 
-      <section className="w-full mt-32 bg-primary-foreground py-12">
+      <section className="w-full mt-32 bg-primary-foreground py-24">
         <div className="w-full h-fit md:px-0 md:w-8/9 mx-auto flex flex-col md:flex-row gap-8 px-6">
           <div className="w-full md:flex-1 h-100%">
             <div className="relative max-w-96 aspect-square mx-auto">

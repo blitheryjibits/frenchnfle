@@ -13,7 +13,7 @@ export default function Home() {
     <main
       className="
       min-h-screen flex flex-col justify-center
-      bg-primary-foreground max-w-screen
+      bg-primary-foreground w-full
       "
     >
       <Nav />
@@ -58,8 +58,8 @@ export default function Home() {
           </span>
         </h2>
         <SpotlightTestimonial
-          author="avatar-1"
-          authorExtra="IBM Digital Consultant"
+          author="Elena V."
+          authorExtra="HR Specialist, Deloitte"
           content="Such a great experience learning french! I went from complete begginer to intermediate in just 6 weeks!"
           imageUrl="/avatars/blue-mohawk.jpg"
         />
@@ -71,22 +71,26 @@ export default function Home() {
         {/* Soft background glow */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-linear-to-t from-primary/5 via-transparent to-transparent" />
       </div>
-
-      <div className="w-4/5 mt-32 mx-auto flex flex-col-reverse md:flex-row">
-        <EmailForm />
-        <div className="flex-1 flex h-100% justify-center my-auto text-center font-eb-garamond text-primary">
-          <div className="flex flex-col gap-12 text-4xl">
-            <div className="-rotate-15 -translate-x-9 -translate-y-9">
-              <p>Un seul objectif:</p>
-              <p>VOTRE RÉUSSITE</p>
-            </div>
-            <div className=" -rotate-15 translate-x-9 -translate-y-9">
-              <p>One goal :</p>
-              <p>YOUR SUCCESS</p>
+      <section className="w-full mt-32 text-center">
+        <h2 className="text-4xl font-noto-serif">
+          Envie d&apos;en savoir plus ?
+        </h2>
+        <div className="w-2/3 mx-auto py-8 flex flex-col-reverse md:flex-row">
+          <EmailForm />
+          <div className="flex-1 flex h-100% justify-center my-auto text-center font-eb-garamond text-primary">
+            <div className="flex flex-col gap-12 text-4xl">
+              <div className="-rotate-15 -translate-x-9 -translate-y-9">
+                <p>Un seul objectif:</p>
+                <p>VOTRE RÉUSSITE</p>
+              </div>
+              <div className=" -rotate-15 translate-x-9 -translate-y-9">
+                <p>One goal :</p>
+                <p>YOUR SUCCESS</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </main>
   );

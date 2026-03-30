@@ -39,7 +39,7 @@ export const EmailForm = () => {
   };
 
   return (
-    <div className="flex items-center w-full mx-auto md:mx-0 max-w-[clamp(300px,50vw,600px)] sm:max-w-[clamp(300px,66vw,700px)]">
+    <div className="flex items-center w-full mx-auto md:max-w-[clamp(300px,50vw,600px)] max-w-[clamp(300px,66vw,700px)]">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className=" p-8 rounded bg-primary-foreground/60 flex flex-col gap-3 border shadow-md hover:shadow-xl w-full max-w-lg
