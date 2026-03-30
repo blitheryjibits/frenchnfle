@@ -77,7 +77,7 @@ export default function Home() {
         </h2>
         <div className="w-2/3 mx-auto py-8 flex flex-col-reverse md:flex-row">
           <EmailForm />
-          <div className="flex-1 flex h-100% justify-center my-auto text-center font-eb-garamond text-primary">
+          <div className="flex-1 hidden md:flex h-100% justify-center my-auto text-center font-eb-garamond text-primary">
             <div className="flex flex-col gap-12 text-4xl">
               <div className="-rotate-15 -translate-x-9 -translate-y-9">
                 <p>Un seul objectif:</p>
