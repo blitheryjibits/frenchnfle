@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div
+    <main
       className="
       min-h-screen flex flex-col justify-center
-      bg-primary-foreground max-w-screen overflow-hidden
+      bg-primary-foreground max-w-screen
       "
     >
       <Nav />
@@ -88,6 +88,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </div>
+    </main>
   );
 }
