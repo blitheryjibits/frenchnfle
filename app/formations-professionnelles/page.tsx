@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { MaisonryGridCard } from "@/components/ui/MaisonryGridCard";
 import { EmailForm } from "@/components/forms/EmailForm";
-import { Music, BookOpen, BabyIcon, Check } from "lucide-react";
+import { Music, BookOpen, BabyIcon, BadgeCheck } from "lucide-react";
 
 export default function formationsProfessionnelles() {
   return (
@@ -92,8 +92,8 @@ export default function formationsProfessionnelles() {
           <h2 className="text-4xl font-playfair font-semibold text-muted">
             Formation Certifiante
           </h2>
-          <div className="flex flex-row mx-auto justify-center py-2 px-8 gap-12 text-2xl rounded-xl bg-primary font-semibold text-white">
-            <Check color="green" size={42} />
+          <div className="flex flex-row mx-auto justify-center items-center text-center py-2 px-4 md:px-8 gap-4 md:gap-12 text:md md:text-2xl rounded-xl bg-primary font-semibold text-white">
+            <BadgeCheck color="#1affbb" size={42} />
             <p>
               Formation d&apos;habilitation d&apos;examinateurs correcteurs
               DELF-DALF*
