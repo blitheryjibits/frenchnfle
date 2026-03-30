@@ -35,6 +35,7 @@ declare global {
     imageAlt: string;
     subtext: string;
     footer: Array<string | ReactNode>;
+    className?: string;
   }
 
   interface CarouselProps {
